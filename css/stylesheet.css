@@ -1,39 +1,89 @@
-/* Herder */
-header{
-    display: grid;
-    grid-area: he;
-    align-content: stretch;
-    grid-template-columns: 70% 30%;
-    grid-template-areas: 'rub nav';
-}
+@media screen and (max-width: 768px){
 
-#rubrik{
-    display: grid;
-    grid-area: rub;
-    justify-self: center;
-    align-self: center;
-}
+    /* Herder mobil*/
+    header{
+        background-color: aquamarine;
+        display: grid;
+        grid-area: he;
+        align-content: stretch;
+        grid-template-rows: 100%;
+        grid-template-columns: 60% 30%;
+        grid-template-areas: 'rub nav';
+    }
 
-nav{
-    grid-area: nav;    
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+    #rubrik{
+        display: grid;
+        grid-area: rub;
+        justify-self: center;
+        align-self: center;
+        font-size: 3rem;
+        font-weight: 600;
+        text-decoration:wavy;
+    }
 
-/* Sök */
+    nav{
+        grid-area: nav;    
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 
-#Sök{
+    /* Sida 1  mobil*/
 
-}
+    #wrapper1{
+        display: grid;
+        height: 150vh;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 45% 45%;
+        grid-template-areas: 
+        'he'
+        'S1s1'
+        'S1s2';
+    }
 
-/* Sida 1 */
+    #sida1section1{
+        display: grid;
+        background-color: rgb(57, 56, 56);
+        grid-area: S1s1;
+        grid-template-columns: 100%;
+        grid-template-rows: 60% 40%;
+        grid-template-areas: 
+        'S1B1'
+        'S1A1'
+        ;
+    }
 
-#wrapper1{
-    display: grid;
-    grid-template-areas: 
-    'he'
-    'Sök'
-    'S1s1'
-    'S1s2';
+    #sida1bild1{
+        grid-area: S1B1;
+    }
+    #sida1article1{
+        grid-area: S1A1;
+    }
+
+    #sida1section2{
+        display: grid;
+        grid-area: S1s2;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 60% 40%;
+        grid-template-areas: 
+        'S1B2 S1B2'
+        'S1A2 S1A2'
+        ;
+    }
+
+    #sida1bild2{
+        grid-area: S1B2;
+    }
+    #sida1bild3{
+        grid-area: S1B3;
+    }
+    #sida1article2{
+        grid-area: S1A2;
+    }
+
+
+
+
+
+
 }
