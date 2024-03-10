@@ -3,18 +3,71 @@ body,ul{
 }
 
 .meny{
-    height: 100dvh;
+    height: 95dvh;
     width: 50vw;
-    background: rgb(93, 93, 93);
+    background-color: rgb(57, 56, 56);
     position:fixed;
     right: 0;
     bottom: 110vh;
     transition: bottom 0.7s;
     box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
     z-index: 10;
+    padding: 20px 20px 20px 20px;
 }
 
+.menylistta{
+    height: 60%;
+    width: 100;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    background-color:antiquewhite;
+    gap: 35px;
+    padding: 35px;
+}
+.menylenk{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 100%;
+    background-color: azure;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.545);
+    color: black;
+    font-size: 20px;
+}
+#menyfooter{
+    margin-top: 20px;
+    height: 17%;
+    justify-content: flex-start;
+}
+#footerArticle{
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    overflow:auto
+}
 
+#footerTextH3{
+    justify-content: flex-start;
+    padding-left: 7px; padding-right: 7px; 
+    margin: 0px;
+    overflow: hidden;
+    line-height: 23px;
+    font-size: 15px;
+    flex-direction: column;
+    flex: 100%;
+}
+#footerTextP{
+    justify-content: flex-start;
+    padding-left: 8px; padding-right: 8px; 
+    margin: 0px;
+    overflow: hidden;
+    line-height: 23px;
+    font-size: 15px;
+    flex-direction: column;
+    flex: 100%;
+    font-size: 16px;
+}
 
 @media screen and (max-width: 768px){
 
@@ -43,6 +96,8 @@ body,ul{
         text-decoration:wavy;
     }
 
+    /*Meny*/
+
     nav{
         grid-area: nav;    
         display: flex;
@@ -68,7 +123,7 @@ body,ul{
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.13);
+        background-color: rgba(0, 0, 0, 0.17);
         display: none;
         z-index: 5;
     }
@@ -77,7 +132,8 @@ body,ul{
         display: block;
     }
 
-    /* Sida 1  mobil*/
+    /*artikel texter*/
+    
     .ArticleParagraph {
         width: 100;
         height: 100;
@@ -94,6 +150,9 @@ body,ul{
     SPAN.li  {
         display: list-item; margin-left: 2em
     }
+    
+    /* Sida 1  mobil*/
+
 
     #wrapper1{
         background-color: antiquewhite;
@@ -127,7 +186,7 @@ body,ul{
         
     }
 
-    #sida1bild1{
+    .sida1bild1{
         grid-area: S1B1;
         justify-self: center;
         border: 1px solid rgb(57, 56, 56);
@@ -194,6 +253,8 @@ body,ul{
         grid-area: S1B4;
         justify-self: center;
         border: 1px solid rgb(57, 56, 56);
+        object-fit: cover;
+        height: 100%;
     }
     #sida1article3{
         background-color:rgb(255, 255, 255);
@@ -201,7 +262,41 @@ body,ul{
         overflow: auto;
     }
 
+    /*Sida 2*/
+    #wrapper2{
+        background-color: antiquewhite;
+        display: grid;
+        height: auto;
+        grid-template-columns: 7% 86% 7%;
+        grid-template-rows: 19vh auto auto 50px;
+        grid-template-areas: 
+        'he he he'
+        '. . .'
+        '. S2s1 .'
+        '. . .';
+    }
 
+    #sida2section1{
+        display: grid;
+        grid-area: S2s1;
+        grid-template-columns: 100%;
+        height: auto;
+        grid-template-areas: 
+        'S2B1'
+        'S2A1'
+        ;
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+        gap:1px;
+        
+    }
 
-
+    #sida2bild1{
+        grid-area: S2B1;
+        justify-self: center;
+        width: 100%;
+    }
+    #sida2article1{
+        background-color:rgb(255, 255, 255);
+        grid-area: S2A1;
+    }
 }
