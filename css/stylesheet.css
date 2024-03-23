@@ -143,9 +143,12 @@ body,ul{
         overflow:hidden;
         overflow-wrap: normal;
         text-overflow: ellipsis;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
     H2 {
         margin:5px 20px 10px 20px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 30px;
     }
     SPAN.li  {
         display: list-item; margin-left: 2em
@@ -268,10 +271,9 @@ body,ul{
         display: grid;
         height: auto;
         grid-template-columns: 7% 86% 7%;
-        grid-template-rows: 19vh auto auto 50px;
+        grid-template-rows: 19vh 100vh  50px;
         grid-template-areas: 
         'he he he'
-        '. . .'
         '. S2s1 .'
         '. . .';
     }
@@ -280,13 +282,12 @@ body,ul{
         display: grid;
         grid-area: S2s1;
         grid-template-columns: 100%;
-        height: auto;
+        grid-template-rows: auto auto;
         grid-template-areas: 
         'S2B1'
-        'S2A1'
-        ;
+        'S2A1';
         box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-        gap:1px;
+        gap:px;
         
     }
 
@@ -299,4 +300,92 @@ body,ul{
         background-color:rgb(255, 255, 255);
         grid-area: S2A1;
     }
+
+
+    /* Sida3 */
+
+
+    #wrapper3{
+        background-color: antiquewhite;
+        display: grid;
+        height: 160vh;
+        grid-template-columns: 7% 39.5% 7% 39.5% 7%;
+        grid-template-rows: 9% 4% 49% 4% 30% 4%;
+        grid-template-areas: 
+        'he he he he he'
+        '. . . . .'
+        '. S3s1 S3s1 S3B1 .'
+        '. . . . .'
+        '. S3s2 . S3s3 .'
+        '. . . . .';
+    }
+
+    #sida3section1{
+        display: grid;
+        background-color: rgb(57, 56, 56);
+        grid-area: S3s1;
+        grid-template-areas: 
+        'S3A1'
+        ;
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+        gap:1px;
+        
+    }
+
+    #sida3bild1{
+        grid-area: S3B1;
+        width: 100;
+        max-width: 30vw;
+        padding: 10px;
+        justify-self: right;
+        border: 1px solid rgb(57, 56, 56);
+        background-color: white;
+        
+    }
+    #sida3article1{
+        background-color:rgb(255, 255, 255);
+        grid-area: S3A1;
+        overflow: auto;
+    }
+
+    #sida3section2{
+        display: grid;
+        background-color: rgb(57, 56, 56);
+        grid-area: S3s2;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+        grid-template-areas: 
+        'S3A2';
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+        gap: 1px;
+    }
+    #sida3article2{
+        background-color:rgb(255, 255, 255);
+        grid-area: S3A2;
+        overflow: auto;
+    }
+
+    #sida3section3{
+        display: grid;
+        background-color: rgb(57, 56, 56);
+        grid-area: S3s3;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+        grid-template-areas: 
+        'S3A3'
+        ;
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+        gap: 1px;
+    }
+    #sida3article3{
+        background-color:rgb(255, 255, 255);
+        grid-area: S3A3;
+        overflow: auto;
+    }
+
+
+
+
 }
+
+
