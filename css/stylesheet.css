@@ -69,103 +69,449 @@ body,ul{
     font-size: 16px;
 }
 
-@media screen and (max-width: 768px){
 
+
+
+/* Herder mobil*/
+header{
+    background-color: rgba(255, 255, 255, 0.847);
+    display: grid;
+    grid-area: he;
+    align-content: stretch;
+    grid-template-rows: 100%;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: 
+    'rub nav';
+    position: fixed;
+    width: 100%;
+    height: 13vh;
+}
+
+#rubrik{
+    display: grid;
+    grid-area: rub;
+    justify-self: center;
+    align-self: center;
+    font-size: 3rem;
+    font-weight: 600;
+    text-decoration:wavy;
+}
+
+/*Meny*/
+
+nav{
+    grid-area: nav;    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.meny-knapp{
+    cursor: pointer;
+    display: inline;
+}
+
+.meny-knapp i.material-icons{
+    font-size: 2.8rem;
+}
+
+.show{
+    bottom: 0vh;
+}
+
+.lager{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.17);
+    display: none;
+    z-index: 5;
+}
+
+.lager.visible{
+    display: block;
+}
+
+.underrubriklenk{
+    visibility: hidden;
+}
+
+/*artikel texter*/
+
+.ArticleParagraph {
+    width: 100;
+    height: 100;
+    border: 1px solid;
+    padding: 2px 5px;
+    margin: 0px 20px 40px 20px;
+    overflow:hidden;
+    overflow-wrap: normal;
+    text-overflow: ellipsis;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+H2 {
+    margin:5px 20px 10px 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+}
+SPAN.li  {
+    display: list-item; margin-left: 2em
+}
+.StorRubrik{
+    font-size: 40px;
+    margin:20px 20px 30px 20px;
+}
+
+/* Sida 1 */
+
+
+#wrapper1{
+    background-color: antiquewhite;
+    display: grid;
+    height: 130vh;
+    grid-template-columns: 7% 86% 7%;
+    grid-template-rows: 10% 1% 26% 4% 26% 4% 26% 4%;
+    grid-template-areas: 
+    'he he he'
+    '. . .'
+    '. S1s1 .'
+    '. . .'
+    '. S1s2 .'
+    '. . .'
+    '. S1s3 .'
+    '. . .';
+}
+
+#sida1section1{
+    display: grid;
+    background-color: rgb(57, 56, 56);
+    grid-area: S1s1;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: 
+    'S1B1'
+    'S1A1'
+    ;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    gap:1px;
+    
+}
+
+.sida1bild1{
+    grid-area: S1B1;
+    justify-self: center;
+    border: 1px solid rgb(57, 56, 56);
+}
+#sida1article1{
+    background-color:rgb(255, 255, 255);
+    grid-area: S1A1;
+    overflow: auto;
+}
+
+
+#sida1section2{
+    display: grid;
+    background-color: rgb(57, 56, 56);
+    grid-area: S1s2;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: 
+    'S1B2 S1B3'
+    'S1A2 S1A2'
+    ;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    gap: 1px;
+    overflow: hidden;
+    
+}
+
+#sida1bild2{
+    grid-area: S1B2;
+    float:left;
+    height:98%;
+    object-fit:contain;
+    border: 1px solid rgb(57, 56, 56);
+    justify-self: end;
+}
+#sida1bild3{
+    grid-area: S1B3;
+    float:left;
+    height:98%;
+    object-fit:contain;
+    border: 1px solid rgb(57, 56, 56);
+}
+#sida1article2{
+    background-color:rgb(255, 255, 255);
+    grid-area: S1A2;
+    overflow: auto;
+}
+
+#sida1section3{
+    display: grid;
+    background-color: rgb(57, 56, 56);
+    grid-area: S1s3;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: 
+    'S1B4'
+    'S1A3'
+    ;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    gap: 1px;
+}
+
+#sida1bild4{
+    grid-area: S1B4;
+    justify-self: center;
+    border: 1px solid rgb(57, 56, 56);
+    object-fit: cover;
+    height: 100%;
+}
+#sida1article3{
+    background-color:rgb(255, 255, 255);
+    grid-area: S1A3;
+    overflow: auto;
+}
+
+/*Sida 2*/
+#wrapper2{
+    background-color: antiquewhite;
+    display: grid;
+    height: auto;
+    grid-template-columns: 7% 86% 7%;
+    grid-template-rows: 19vh auto  50px;
+    grid-template-areas: 
+    'he he he'
+    '. S2s1 .'
+    '. . .';
+}
+
+#sida2section1{
+    display: grid;
+    grid-area: S2s1;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'S2B1'
+    'S2A1';
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+}
+
+#sida2bild1{
+    grid-area: S2B1;
+    justify-self: center;
+    width: 100%;
+}
+#sida2article1{
+    background-color:rgb(255, 255, 255);
+    grid-area: S2A1;
+}
+
+
+/* Sida3 */
+
+
+#wrapper3{
+    background-color: antiquewhite;
+    display: grid;
+    height: 160vh;
+    grid-template-columns: 7% 39.5% 7% 39.5% 7%;
+    grid-template-rows: 9% 4% 49% 4% 30% 4%;
+    grid-template-areas: 
+    'he he he he he'
+    '. . . . .'
+    '. S3s1 S3s1 S3B1 .'
+    '. . . . .'
+    '. S3s2 . S3s3 .'
+    '. . . . .';
+}
+
+#sida3section1{
+    display: grid;
+    grid-area: S3s1;
+    grid-template-areas: 
+    'S3A1'
+    ;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    gap:1px;
+    
+}
+
+#sida3bild1{
+    grid-area: S3B1;
+    width: 100;
+    max-width: 30vw;
+    padding: 10px;
+    justify-self: right;
+    border: 1px solid rgb(57, 56, 56);
+    background-color: white;
+    
+}
+#sida3article1{
+    background-color:rgb(255, 255, 255);
+    grid-area: S3A1;
+    overflow: auto;
+}
+
+#sida3section2{
+    display: grid;
+    grid-area: S3s2;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    'S3A2';
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    gap: 1px;
+}
+#sida3article2{
+    background-color:rgb(255, 255, 255);
+    grid-area: S3A2;
+    overflow: auto;
+}
+
+#sida3section3{
+    display: grid;
+    grid-area: S3s3;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    'S3A3'
+    ;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    gap: 1px;
+}
+#sida3article3{
+    background-color:rgb(255, 255, 255);
+    grid-area: S3A3;
+    overflow: auto;
+}
+
+/* Sida4 */
+#wrapper4{
+    background-color: antiquewhite;
+    display: grid;
+    height: auto;
+    grid-template-columns: 7% 86% 7%;
+    grid-template-rows: 19vh auto  40px auto 40px auto 40px;
+    grid-template-areas: 
+    'he he he'
+    '. S2s1 .'
+    '. . .'
+    '. S2s2 .'
+    '. . .'
+    '. S2s3 .'
+    '. . .';
+}
+
+#sida4section1{
+    display: grid;
+    grid-area: S2s1;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'S4B1'
+    'S4A1';
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    
+}
+
+#sida4bild1{
+    grid-area: S4B1;
+    width: 100%;
+}
+#sida4article1{
+    background-color:rgb(255, 255, 255);
+    grid-area: S4A1;
+}
+
+#sida4section2{
+    display: grid;
+    grid-area: S2s2;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'S4B2'
+    'S4A2';
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    
+}
+
+#sida4bild2{
+    grid-area: S4B2;
+    width: 100%;
+}
+#sida4article2{
+    background-color:rgb(255, 255, 255);
+    grid-area: S4A2;
+}
+
+#sida4section3{
+    display: grid;
+    grid-area: S2s3;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'S4B3'
+    'S4A3';
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    
+}
+
+#sida4bild3{
+    grid-area: S4B3;
+    width: 100%;
+}
+#sida4article3{
+    background-color:rgb(255, 255, 255);
+    grid-area: S4A3;
+}
+
+
+/* Dator */
+@media screen and (min-width: 768px){
 
     /* Herder mobil*/
     header{
-        background-color: rgba(255, 255, 255, 0.847);
-        display: grid;
-        grid-area: he;
-        align-content: stretch;
-        grid-template-rows: 100%;
+        height: 17vh;
+        grid-template-rows: 80% 20%;
         grid-template-columns: 70% 30%;
-        grid-template-areas: 'rub nav';
-        position: fixed;
-        width: 100%;
-        height: 13vh;
+        grid-template-areas: 
+        'rub nav'
+        'lenkar lenkar';
     }
 
-    #rubrik{
-        display: grid;
-        grid-area: rub;
-        justify-self: center;
-        align-self: center;
-        font-size: 3rem;
-        font-weight: 600;
-        text-decoration:wavy;
-    }
 
-    /*Meny*/
-
-    nav{
-        grid-area: nav;    
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+    .meny{
+        width: 30vw;
     }
-    .meny-knapp{
-        cursor: pointer;
-        display: inline;
-    }
-
     .meny-knapp i.material-icons{
-        font-size: 2.5rem;
-    }
-    
-    .show{
-        bottom: 0vh;
+        font-size: 3.5rem;
     }
 
-    .lager{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.17);
-        display: none;
-        z-index: 5;
-    }
-    
-    .lager.visible{
-        display: block;
+    #underrubriker{
+        display: flex;
+        grid-area: lenkar;
+        justify-content: space-around;
+        margin-right: 10vw; margin-left: 10vw; 
+        border-top: 1px solid rgb(0, 0, 0);
     }
 
-    /*artikel texter*/
-    
-    .ArticleParagraph {
-        width: 100;
-        height: 100;
-        border: 1px solid;
-        padding: 2px 5px;
-        margin: 0px 20px 40px 20px;
-        overflow:hidden;
-        overflow-wrap: normal;
-        text-overflow: ellipsis;
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    .underrubriklenk{
+     color: black;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     text-decoration: none;
+     visibility:visible;
     }
-    H2 {
-        margin:5px 20px 10px 20px;
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 30px;
-    }
-    SPAN.li  {
-        display: list-item; margin-left: 2em
-    }
-    
-    /* Sida 1  mobil*/
 
 
+    /* Sida1 */
     #wrapper1{
-        background-color: antiquewhite;
-        display: grid;
-        height: 130vh;
-        grid-template-columns: 7% 86% 7%;
-        grid-template-rows: 10% 1% 26% 4% 26% 4% 26% 4%;
+        height: auto;
+        grid-template-columns: 15% 70% 15%;
+        grid-template-rows: 25vh auto 10vh auto 10vh auto 10vh;
         grid-template-areas: 
         'he he he'
-        '. . .'
         '. S1s1 .'
         '. . .'
         '. S1s2 .'
@@ -173,219 +519,98 @@ body,ul{
         '. S1s3 .'
         '. . .';
     }
-
+    
     #sida1section1{
-        display: grid;
-        background-color: rgb(57, 56, 56);
-        grid-area: S1s1;
-        grid-template-columns: 100%;
-        grid-template-rows: 60% 40%;
+        grid-template-rows: auto auto;
         grid-template-areas: 
         'S1B1'
         'S1A1'
         ;
-        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-        gap:1px;
-        
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);   
     }
-
+    
     .sida1bild1{
-        grid-area: S1B1;
-        justify-self: center;
-        border: 1px solid rgb(57, 56, 56);
+        width: 100%;
     }
-    #sida1article1{
-        background-color:rgb(255, 255, 255);
-        grid-area: S1A1;
-        overflow: auto;
-    }
-
-
+    
     #sida1section2{
-        display: grid;
-        background-color: rgb(57, 56, 56);
-        grid-area: S1s2;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 60% 40%;
+        grid-template-rows: auto auto;
         grid-template-areas: 
         'S1B2 S1B3'
         'S1A2 S1A2'
         ;
-        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-        gap: 1px;
-        overflow: hidden;
-        
     }
-
     #sida1bild2{
-        grid-area: S1B2;
-        float:left;
-        height:98%;
-        object-fit:contain;
-        border: 1px solid rgb(57, 56, 56);
-        justify-self: end;
-    }
+        width: 100%;
+    }    
     #sida1bild3{
-        grid-area: S1B3;
-        float:left;
-        height:98%;
-        object-fit:contain;
-        border: 1px solid rgb(57, 56, 56);
+        width: 100%;
     }
-    #sida1article2{
-        background-color:rgb(255, 255, 255);
-        grid-area: S1A2;
-        overflow: auto;
-    }
-
+    
     #sida1section3{
-        display: grid;
-        background-color: rgb(57, 56, 56);
-        grid-area: S1s3;
-        grid-template-columns: 100%;
-        grid-template-rows: 60% 40%;
+        grid-template-rows: auto auto;
         grid-template-areas: 
         'S1B4'
         'S1A3'
         ;
-        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-        gap: 1px;
     }
-
+    
     #sida1bild4{
-        grid-area: S1B4;
-        justify-self: center;
-        border: 1px solid rgb(57, 56, 56);
-        object-fit: cover;
-        height: 100%;
-    }
-    #sida1article3{
-        background-color:rgb(255, 255, 255);
-        grid-area: S1A3;
-        overflow: auto;
-    }
-
-    /*Sida 2*/
-    #wrapper2{
-        background-color: antiquewhite;
-        display: grid;
-        height: auto;
-        grid-template-columns: 7% 86% 7%;
-        grid-template-rows: 19vh 100vh  50px;
-        grid-template-areas: 
-        'he he he'
-        '. S2s1 .'
-        '. . .';
-    }
-
-    #sida2section1{
-        display: grid;
-        grid-area: S2s1;
-        grid-template-columns: 100%;
-        grid-template-rows: auto auto;
-        grid-template-areas: 
-        'S2B1'
-        'S2A1';
-        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-        gap:px;
-        
-    }
-
-    #sida2bild1{
-        grid-area: S2B1;
-        justify-self: center;
         width: 100%;
     }
-    #sida2article1{
-        background-color:rgb(255, 255, 255);
-        grid-area: S2A1;
+
+    /* Sida2 */
+    #wrapper2{
+        grid-template-columns: 15% 70% 15%;
+        grid-template-rows: 25vh auto  50px;
     }
-
-
     /* Sida3 */
 
-
     #wrapper3{
-        background-color: antiquewhite;
-        display: grid;
-        height: 160vh;
-        grid-template-columns: 7% 39.5% 7% 39.5% 7%;
-        grid-template-rows: 9% 4% 49% 4% 30% 4%;
+        background-image: url("../img/bildochformOM.jpg");
+        height: 110vh;
+        grid-template-columns: 10% 38% 4% 38% 10%;
+        grid-template-rows: 25vh  35% 7% 26% 10%;
         grid-template-areas: 
         'he he he he he'
-        '. . . . .'
         '. S3s1 S3s1 S3B1 .'
-        '. . . . .'
+        '. . . S3s3 .'
         '. S3s2 . S3s3 .'
         '. . . . .';
     }
-
-    #sida3section1{
-        display: grid;
-        background-color: rgb(57, 56, 56);
-        grid-area: S3s1;
-        grid-template-areas: 
-        'S3A1'
-        ;
-        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-        gap:1px;
-        
-    }
-
+    
     #sida3bild1{
-        grid-area: S3B1;
-        width: 100;
-        max-width: 30vw;
-        padding: 10px;
-        justify-self: right;
-        border: 1px solid rgb(57, 56, 56);
-        background-color: white;
-        
+        justify-self: center;
     }
     #sida3article1{
-        background-color:rgb(255, 255, 255);
-        grid-area: S3A1;
-        overflow: auto;
+        opacity: 0.8;
     }
-
-    #sida3section2{
-        display: grid;
-        background-color: rgb(57, 56, 56);
-        grid-area: S3s2;
-        grid-template-columns: 100%;
-        grid-template-rows: 100%;
-        grid-template-areas: 
-        'S3A2';
-        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-        gap: 1px;
-    }
+    
     #sida3article2{
-        background-color:rgb(255, 255, 255);
-        grid-area: S3A2;
-        overflow: auto;
+        opacity: 0.8;
     }
-
-    #sida3section3{
-        display: grid;
-        background-color: rgb(57, 56, 56);
-        grid-area: S3s3;
-        grid-template-columns: 100%;
-        grid-template-rows: 100%;
-        grid-template-areas: 
-        'S3A3'
-        ;
-        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
-        gap: 1px;
-    }
+    
     #sida3article3{
-        background-color:rgb(255, 255, 255);
-        grid-area: S3A3;
-        overflow: auto;
+        opacity: 0.8;
     }
 
+    /* Sida4 */
 
-
-
+    #wrapper4{
+        background-color: antiquewhite;
+        display: grid;
+        height: auto;
+        grid-template-columns: 15% 70% 15%;
+        grid-template-rows: 25vh auto  70px auto 70px auto 70px;
+        grid-template-areas: 
+        'he he he'
+        '. S2s1 .'
+        '. . .'
+        '. S2s2 .'
+        '. . .'
+        '. S2s3 .'
+        '. . .';
+    }
 }
 
 
